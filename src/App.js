@@ -13,31 +13,50 @@ class App extends Component{
   }
 
   
-handleClick = (event) => {
+handleClick = () => {
   //when image is clicked, add 1 to score
-    //document.getElementsByClassName('img-thumbnail').addEventListener('click', function(){
-      console.log("this is being passed as props correctly")
-      const name = event.target.attributes.getNamedItem("name").value
-      this.shuffleCharacters()
-      this.checkGuess(name,this.updateScore)
+  console.log("the click is working")
+  console.log(this.state.score)
+  this.state.score ++
 
-  //});
   }
 
-  shuffleVillagers = () =>{
-    this.setState(this.state.villagers = this.shuffleArray(this.state.villagers))
-  }
+  // shuffleVillagers = () =>{
+  //   this.setState(this.state.villagers = this.shuffleArray(this.state.villagers))
+  // }
 
-  shuffleArray = (a) =>{
-    var j,x,i;
-    for (i=a.length-1; i>0;i--){
-      j=Math.floor(Math.random()*(i+1))
-      x=a[i]
-      a[i]=a[j]
-      a[j] = x
-    }
-    return a
-  }
+  // shuffleArray = (a) =>{
+  //   var j,x,i;
+  //   for (i=a.length-1; i>0;i--){
+  //     j=Math.floor(Math.random()*(i+1))
+  //     x=a[i]
+  //     a[i]=a[j]
+  //     a[j] = x
+  //   }
+  //   return a
+  // }
+  // checkGuess = (name, cb) => {
+  //   const newState = { ...this.state };
+  //   if (newState.pickedChars.includes(name)) {
+  //     newState.alertMessage = `You already picked "${name.toUpperCase()}"!`
+  //     newState.pickedChars = []
+  //     this.setState(this.state = newState)
+  //   } else {
+  //     newState.pickedChars.push(name)
+  //     newState.alertMessage = "Correct!"
+  //     this.setState(this.state = newState)
+  //   }
+  //   cb(newState, this.alertWinner)
+  // }
+
+  // updateTopScore = (newState, cb) => {
+  //   if (newState.pickedChars.length > newState.topScore) {
+  //     newState.topScore++
+  //     this.setState(this.state = newState)
+  //   }
+  //   cb(newState)
+  // }
+
 
   render(){
     return(
@@ -48,7 +67,7 @@ handleClick = (event) => {
           id = {villager.id}
           name = {villager.name}
           image = {villager.image}
-          handleClicked = {this.handleClicked}
+          handleClick = {this.handleClick}
           />
         ))}
       </Wrapper>

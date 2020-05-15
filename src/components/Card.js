@@ -9,23 +9,34 @@ const styles = {
   }
 }
 
-class Card extends Component {
+// class Card extends Component {
 
-// handleClick(){
-// let score = 0
-// //when image is clicked, add 1 to score
-//   //document.getElementsByClassName('img-thumbnail').addEventListener('click', function(){
-//     score++
-//     console.log(score)
-//     return score
-// //});
+// // handleClick(){
+// // let score = 0
+// // //when image is clicked, add 1 to score
+// //   //document.getElementsByClassName('img-thumbnail').addEventListener('click', function(){
+// //     score++
+// //     console.log(score)
+// //     return score
+// // //});
+// // }
+// //  render (handleClick){ 
+// //   return <button><img style = {styles.img}  src = {this.props.image} alt="..." class="img-thumbnail" onClick={handleClick}></img></button>
+
+// //  }
+
+
+
 // }
- render (handleClick){ 
-  return <button><img style = {styles.img}  src = {this.props.image} alt="..." class="img-thumbnail" onClick={handleClick}></img></button>
 
- }
-}
+const Card = (props) =>(
+  <button><img style = {styles.img}  
+  src = {props.image} 
+  alt="..." 
+  class="img-thumbnail" 
+  onClick={() => props.handleClick()}></img></button>
 
+)
 
 
 export default Card;
