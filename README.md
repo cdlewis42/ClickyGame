@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Clicky Game 
 A game where you click images and memorize which ones you have clicked before. If you click one that has been clicked before, you lose and start over. There are a total of 10 images currently.
 
@@ -23,6 +24,8 @@ React
 then
 ``` npm run deploy ```
 
+=======
+>>>>>>> af6027e23b1f3fcc1f78003aa7557a19baadb48b
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
