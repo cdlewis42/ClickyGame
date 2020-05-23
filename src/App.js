@@ -12,18 +12,6 @@ class App extends Component{
     alertMessage:""
   }
  
-handleClick = () => {
-  //when image is clicked, add 1 to score
-  console.log("the click is working")
-  console.log(this.state.score)
-  //if id doesnt equal id in pickedvills
-  //for
-  //if(this.id != )
-  const newState = this.state.score + 1
-  
-    this.setState({score: newState}) 
-
-  }
 
   // shuffleVillagers = () =>{
   //   this.setState(this.state.villagers = this.shuffleArray(this.state.villagers))
@@ -39,19 +27,35 @@ handleClick = () => {
   //    }
   //    return a
   //  }
-  //  checkGuess = (name, cb) => {
-  //    const newState = { ...this.state };
-  //    if (newState.pickedChars.includes(name)) {
-  //      newState.alertMessage = `You already picked "${name.toUpperCase()}"!`
-  //      newState.pickedChars = []
-  //      this.setState(this.state = newState)
-  //    } else {
-  //      newState.pickedChars.push(name)
-  //      newState.alertMessage = "Correct!"
-  //      this.setState(this.state = newState)
-  //    }
-  //    cb(newState, this.alertWinner)
-  //  }
+   checkGuess = (name) => {
+     const newState = { ...this.state };
+  
+     if (newState.pickedVills.includes(name)) {
+       newState.alertMessage = `You already picked "${name.toUpperCase()}"!`
+       newState.pickedVills = []
+       this.setState({state: newState})
+       console.log(newState)
+     } else {
+       newState.pickedVills.push(name)
+       newState.alertMessage = "Correct!"
+       this.setState({state: newState})
+       console.log(newState)
+     }
+     
+   }
+
+   handleClick = () => {
+    //when image is clicked, add 1 to score
+    console.log("the click is working")
+    console.log(this.state.score)
+    //if id doesnt equal id in pickedvills
+    //for
+    //if(this.id != )
+    const newState = this.state.score + 1
+    
+      this.setState({score: newState})
+  
+    }
 
   // updateTopScore = (newState, cb) => {
   //   if (newState.pickedChars.length > newState.topScore) {
@@ -73,6 +77,7 @@ handleClick = () => {
           name = {villager.name}
           image = {villager.image}
           handleClick = {this.handleClick}
+          checkGuess = {this.checkGuess}
           />
         ))}
       </Wrapper>

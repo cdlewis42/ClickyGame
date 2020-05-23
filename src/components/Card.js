@@ -34,7 +34,9 @@ const Card = (props) =>(
   src = {props.image} 
   alt="..." 
   class="img-thumbnail" 
-  onClick={() => props.handleClick()}></img></button>
+  onClick={() => {props.handleClick();
+  props.checkGuess(props.name)}}></img>{props.name}</button>
+
 
 )
 

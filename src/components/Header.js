@@ -5,6 +5,7 @@ function Header() {
   return (
     <header className="header">
       <h1>Clicky Game</h1>
+      <h2>Score: </h2>
     </header>
   );
 }
