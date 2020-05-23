@@ -13,31 +13,35 @@ class App extends Component{
   }
  
 
-  // shuffleVillagers = () =>{
-  //   this.setState(this.state.villagers = this.shuffleArray(this.state.villagers))
-  //  }
+  shuffleVillagers = () =>{
+    this.setState(this.state.villagers = this.shuffleArray(this.state.villagers))
+    }
 
-  //  shuffleArray = (a) =>{
-  //    var j,x,i;
-  //    for (i=a.length-1; i>0;i--){
-  //      j=Math.floor(Math.random()*(i+1))
-  //      x=a[i]
-  //      a[i]=a[j]
-  //      a[j] = x
-  //    }
-  //    return a
-  //  }
+   shuffleArray = (a) =>{
+     var j,x,i;
+     for (i=a.length-1; i>0;i--){
+       j=Math.floor(Math.random()*(i+1))
+       x=a[i]
+       a[i]=a[j]
+       a[j] = x
+     }
+     return a
+   }
    checkGuess = (name) => {
      const newState = { ...this.state };
   
      if (newState.pickedVills.includes(name)) {
-       newState.alertMessage = `You already picked "${name.toUpperCase()}"!`
-       newState.pickedVills = []
+       this.setState({alertMessage: `You already picked "${name.toUpperCase()}"!`})
        this.setState({state: newState})
+       this.setState({score: 0})
+       this.setState({pickedVills:[]})
        console.log(newState)
      } else {
        newState.pickedVills.push(name)
-       newState.alertMessage = "Correct!"
+       this.setState({alertMessage: "Correct!"})
+       const newState2 = this.state.score + 1
+    
+      this.setState({score: newState2})
        
        this.setState({state: newState})
        console.log(newState)
@@ -52,9 +56,9 @@ class App extends Component{
     //if id doesnt equal id in pickedvills
     //for
     //if(this.id != )
-    const newState = this.state.score + 1
+    // const newState = this.state.score + 1
     
-      this.setState({score: newState})
+    //   this.setState({score: newState})
   
     }
 
@@ -70,7 +74,7 @@ class App extends Component{
   render(){
     return(
       <Wrapper>
-      <Header score = {this.state.score}>
+      <Header score = {this.state.score} alertMessage = {this.state.alertMessage}>
       </Header>
         
         {this.state.villagers.map(villager=>(
