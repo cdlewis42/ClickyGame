@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Wrapper from "./components/Wrapper"
-import Header from "./components/Header";
+import Header from "./components/Header/index.js";
 import Card from "./components/Card";
 import villagers from "./villagers.json"
 
@@ -38,6 +38,7 @@ class App extends Component{
      } else {
        newState.pickedVills.push(name)
        newState.alertMessage = "Correct!"
+       
        this.setState({state: newState})
        console.log(newState)
      }
@@ -69,7 +70,9 @@ class App extends Component{
   render(){
     return(
       <Wrapper>
-        <Header></Header>
+      <Header score = {this.state.score}>
+      </Header>
+        
         {this.state.villagers.map(villager=>(
           <Card
           id = {villager.id}

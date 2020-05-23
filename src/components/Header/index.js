@@ -1,11 +1,12 @@
 import React from "react";
-import "../styles/Header.css";
+import "./style.css";
 
-function Header() {
+function Header(props) {
   return (
     <header className="header">
       <h1>Clicky Game</h1>
-      <h2>Score: </h2>
+  <h2>Score: {props.score}</h2>
+      <h2>High Score: </h2>
     </header>
   );
 }
