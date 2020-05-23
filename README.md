@@ -2,7 +2,7 @@
 A game where you click images and memorize which ones you have clicked before. If you click one that has been clicked before, you lose and start over. There are a total of 10 images currently.
 
 ## Technologies Used:
-React
+* React
 
 ## Getting Started
 * Use your terminal to run 
