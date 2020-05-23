@@ -1,3 +1,29 @@
+# Clicky Game 
+A game where you click images and memorize which ones you have clicked before. If you click one that has been clicked before, you lose and start over. There are a total of 10 images currently.
+
+## Technologies Used:
+React
+
+## Getting Started
+* Use your terminal to run 
+
+```npm install``` or  ```npm i```
+
+## Deployed using GitHub Pages
+* Add this line of code to your package.json
+```json
+"homepage": "https://username.github.io/reponame/"
+``` 
+* Add this script to your package.json "deploy": "npm run build&&gh-pages -d build"
+```json
+"deploy": "npm run build&&gh-pages -d build"
+``` 
+* In your terminal run
+``` npm run build ```
+then
+``` npm run deploy ```
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
