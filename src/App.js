@@ -40,7 +40,7 @@ class App extends Component{
        newState.pickedVills.push(name)
        this.setState({alertMessage: "Correct!"})
        const newState2 = this.state.score + 1
-    
+      
       this.setState({score: newState2})
        
        this.setState({state: newState})
@@ -85,6 +85,7 @@ class App extends Component{
           image = {villager.image}
           handleClick = {this.handleClick}
           checkGuess = {this.checkGuess}
+          shuffleVillagers = {this.shuffleVillagers} 
           />
         ))}
       </Wrapper>

@@ -35,7 +35,7 @@ const Card = (props) =>(
   alt="..." 
   class="img-thumbnail" 
   onClick={() => {props.handleClick();
-  props.checkGuess(props.name)}}></img>{props.name}</button>
+  props.checkGuess(props.name); props.shuffleVillagers()}}></img>{props.name}</button>
 
 
 )
