@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ClickyGame/static/css/main.81effb55.chunk.css",
+    "main.js": "/ClickyGame/static/js/main.ef58d5d6.chunk.js",
+    "main.js.map": "/ClickyGame/static/js/main.ef58d5d6.chunk.js.map",
+    "runtime-main.js": "/ClickyGame/static/js/runtime-main.6e0552f1.js",
+    "runtime-main.js.map": "/ClickyGame/static/js/runtime-main.6e0552f1.js.map",
+    "static/js/2.0ca85c27.chunk.js": "/ClickyGame/static/js/2.0ca85c27.chunk.js",
+    "static/js/2.0ca85c27.chunk.js.map": "/ClickyGame/static/js/2.0ca85c27.chunk.js.map",
+    "index.html": "/ClickyGame/index.html",
+    "precache-manifest.2e775ffae85efde36264018f63028df0.js": "/ClickyGame/precache-manifest.2e775ffae85efde36264018f63028df0.js",
+    "service-worker.js": "/ClickyGame/service-worker.js",
+    "static/css/main.81effb55.chunk.css.map": "/ClickyGame/static/css/main.81effb55.chunk.css.map",
+    "static/js/2.0ca85c27.chunk.js.LICENSE.txt": "/ClickyGame/static/js/2.0ca85c27.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/ClickyGame/static/media/leafs.39473657.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e0552f1.js",
+    "static/js/2.0ca85c27.chunk.js",
+    "static/css/main.81effb55.chunk.css",
+    "static/js/main.ef58d5d6.chunk.js"
+  ]
+}

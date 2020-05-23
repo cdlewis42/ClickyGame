@@ -1,0 +1,7 @@
+@font-face{
+    src:url("fonts/FinkHeavy.ttf");
+    font-family:fink;
+}
+header {
+font-family: fink
+}
